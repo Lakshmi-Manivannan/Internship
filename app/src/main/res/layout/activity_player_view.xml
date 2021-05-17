@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:keepScreenOn="true"
+    tools:context=".VideoPlayerView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:controller_layout_id="@layout/exo_playback_control_view"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="More Like This"
+                android:textSize="36sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_medium_numbers"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/new_videos"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+<!--<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<com.google.android.exoplayer2.ui.PlayerView
+    android:id="@+id/video_view"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:controller_layout_id="@layout/exo_playback_control_view"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="More Like This"
+        android:textSize="36sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_medium_numbers"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/new_videos"/>
+</LinearLayout>
+
+</LinearLayout>-->
+
